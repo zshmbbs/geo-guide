@@ -1,0 +1,25 @@
+# 企业GEO实战指南：如何让 AI 优先推荐你的品牌与产品
+
+> 一套面向中小企业的 GEO（生成式引擎优化）实战教程，共 11 讲，作者 何承泽。
+> 讲清 AI 搜索如何挑选与推荐内容、企业内容该如何改造、以及 B2B 与本地生活行业的落地方法。
+> 内容采用 CC BY-NC-SA 4.0 许可，可自由阅读与引用，请署名并注明来源。
+
+## 文章
+
+- [SEO与GEO不是取代关系，而是“基建”与“决胜”](articles/01-seo-vs-geo.md)：纠正一个认知误区：GEO 不是 SEO 的替代品。SEO 让 AI 能找到你，GEO 让 AI 决定推荐你。
+- [AI 是怎么推荐你的？一文说明白AI 搜索的评分机制](articles/02-how-ai-ranks-you.md)：AI 搜索基于 RAG（检索增强生成）架构，包括意图解析（理解用户提出的问题）、多路召回（网上查找相关资料）、重排打分（对找到的资料进行
+- [豆包、千问、元宝、DeepSeek收录偏好大起底](articles/03-ai-platform-indexing.md)：AI 引擎的数据抓取并非全网通吃，而是受其母公司生态影响。
+- [分清品牌曝光与商品成交逻辑，布局AI平台生态](articles/04-brand-vs-conversion.md)：品牌曝光和电商成交在 AI 搜索中遵循完全不同的转化逻辑。
+- [GEO 内容创作与优化七步法（附 3 套专用 Prompt 模板）](articles/05-content-playbook.md)：核心逻辑：AI 更倾向于抓取带有具体场景、真实数据和清晰结构的客观内容，而非营销形容词。
+- [AI 搜索怎么找提问词句？教你 3 招挖掘高转化率的“关键句”](articles/06-query-mining.md)：趋势研判：传统短关键词在 AI 时代转化效率相对下降，用户正在转向长句子提问。
+- [七步把企业官网改造成 AI 最爱的“标准数据源”](articles/07-website-as-datasource.md)：企业独立官网是 AI 时代最无可替代的“官方权威数据源”。
+- [防御企业信息被AI投毒及相关处理流程](articles/08-defend-ai-poisoning.md)：“AI 投毒”是利用大模型检索共识机制漏洞，散播虚假信息来误导 AI 的行为。
+- [B2B制造与工业品企业如何通过 GEO提高获客能力](articles/09-b2b-manufacturing.md)：B2B 采购决策通常涉及技术、商务、售后等多方角色，内容需全方位覆盖各方关切。
+- [本地生活类实体店如何让顾客在问AI时推荐你](articles/10-local-business.md)：传统本地生活平台的流量红利逐渐减弱，AI 成为消费者寻找本地服务的新入口。
+- [GEO 效果自检与全网监测方法（附监测模板）](articles/11-monitoring-selfcheck.md)：GEO 不是一锤子买卖，必须建立基于“四大核心指标”的周期性监测机制。
+
+## 关于
+
+- [GitHub 仓库](https://github.com/zshmbbs/geo-guide)：正文 Markdown、原排版快照与配图
+- 原文专栏：https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5NzU2MDI0Mg==&action=getalbum&album_id=4766401206393241601
+- 作者：何承泽

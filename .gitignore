@@ -1,0 +1,7 @@
+# 原始抓取数据（体积大、结构原始，不需要入库）
+raw/
+build.index.json
+node_modules/
+.notes/
+.DS_Store
+Thumbs.db

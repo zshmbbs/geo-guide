@@ -1,0 +1,191 @@
+/* ---------------------------------------------------------------
+   《企业GEO实战指南》静态站点样式
+   同时服务 index.html（目录）和 pages/*.html（原样文章页）
+   --------------------------------------------------------------- */
+
+:root {
+  --ink: #1f2937;
+  --ink-soft: #475569;
+  --ink-mute: #94a3b8;
+  --line: #e2e8f0;
+  --brand: #2563eb;
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; }
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 20px 64px;
+}
+
+/* ---------------- 目录页 ---------------- */
+
+.hero {
+  padding: 40px 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 30px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.hero .sub {
+  margin: 0 0 18px;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+.hero .facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-mute);
+  font-size: 14px;
+}
+.hero .facts b { color: var(--ink); font-weight: 600; }
+
+.lede {
+  margin: 28px 0 8px;
+  padding: 16px 18px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--brand);
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+.lede p { margin: 0 0 8px; }
+.lede p:last-child { margin: 0; }
+
+.toc { margin: 28px 0 0; padding: 0; list-style: none; }
+.toc li {
+  border-bottom: 1px solid var(--line);
+}
+.toc li:first-child { border-top: 1px solid var(--line); }
+.toc a.item {
+  display: block;
+  padding: 18px 4px;
+  color: inherit;
+}
+.toc a.item:hover { text-decoration: none; background: var(--bg-soft); }
+.toc .no {
+  display: inline-block;
+  min-width: 34px;
+  color: var(--ink-mute);
+  font-variant-numeric: tabular-nums;
+  font-size: 14px;
+}
+.toc .t {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.toc .d {
+  margin: 6px 0 0 34px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.toc .links { margin: 8px 0 0 34px; font-size: 13px; color: var(--ink-mute); }
+.toc .links a { margin-right: 14px; }
+
+.site-foot {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-mute);
+  font-size: 13px;
+}
+.site-foot p { margin: 4px 0; }
+
+/* ---------------- 文章页 ---------------- */
+
+.crumb {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--ink-mute);
+}
+.crumb a { color: var(--ink-mute); }
+
+.page-head {
+  margin: 22px 0 26px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.page-head h1 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+.page-head .meta {
+  margin: 0;
+  color: var(--ink-mute);
+  font-size: 13px;
+}
+
+.rich {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #3f3f3f;
+  overflow-wrap: break-word;
+}
+.rich img { display: block; margin: 0 auto; }
+.rich section { max-width: 100%; }
+.rich p { margin: 0 0 16px; }
+.rich table {
+  width: 100% !important;
+  margin: 8px 0 20px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.rich th, .rich td {
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.rich th { background: var(--bg-soft); }
+
+.page-foot {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-mute);
+  word-break: break-all;
+}
+.page-foot p { margin: 4px 0; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 24px; }
+  .page-head h1 { font-size: 21px; }
+  .toc .t { font-size: 16px; }
+}
