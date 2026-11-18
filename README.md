@@ -32,70 +32,6 @@
   注意：在 github.com 网页上直接点 `index.html` / `pages/*.html` 只会显示源码，不会渲染。
 - **纯文本 / 喂给 AI**：`articles/*.md` 是完整正文，图片已本地化，可直接复制、检索、RAG，GitHub 上也能直接预览。
 - **看原排版**：`pages/*.html` 是从公众号保存的静态快照，样式、配图位置与原页面一致（通过 Pages 或本地打开查看）。
-- **给 AI 爬虫的入口**：仓库根目录的 `llms.txt` 列出了全部文章，方便模型抓取引用。
-
-## 本地预览
-
-不需要构建工具，双击 `index.html` 即可。或者起个静态服务：
-
-```bash
-python -m http.server 8000
-# 然后打开 http://localhost:8000
-```
-
-## 目录结构
-
-```
-.
-├── index.html            目录页
-├── articles/             正文 Markdown（11 篇）
-├── pages/                原排版 HTML 快照（11 篇）
-├── assets/
-│   ├── style.css         站点样式
-│   └── images/           全部配图（本地化，不依赖微信图床）
-├── scripts/              抓取结果 → Markdown/HTML 的转换脚本
-├── llms.txt              面向 AI 的站点索引
-└── raw/                  原始抓取数据（不入库）
-```
-
-## 发布到 GitHub Pages
-
-目标：仓库 `https://github.com/zshmbbs/geo-guide`，站点 `https://zshmbbs.github.io/geo-guide/`。
-
-### 方式一：网页上传（不用装任何工具，最快）
-
-1. GitHub 右上角 **+ → New repository**，名字填 `geo-guide`，选 **Public**，点 Create
-2. 进入仓库，点 **uploading an existing file**，把 `index.html`、`articles/`、`pages/`、`assets/`、`README.md`、`LICENSE`、`llms.txt`、`.nojekyll`、`scripts/` 拖进去（`raw/` 不用传，体积大且是中间数据）
-3. **Commit changes**
-4. 仓库 **Settings → Pages**，Source 选 **Deploy from a branch**，Branch 选 **main** + **/ (root)**，Save
-5. 等 1 分钟，访问 `https://zshmbbs.github.io/geo-guide/`
-
-### 方式二：命令行（推荐，后续更新只用一条命令）
-
-```bash
-cd geo-guide
-git init
-git add .
-git commit -m "docs: 《企业GEO实战指南》全 10 讲"
-git branch -M main
-git remote add origin https://github.com/zshmbbs/geo-guide.git
-git push -u origin main
-```
-
-### 方式三：GitHub Desktop
-
-把整个 `geo-guide` 文件夹拖进 GitHub Desktop，点 **Publish repository** 即可。
-
-> ⚠️ 根目录的 `.nojekyll` 不要删：它让 Pages 直接发布静态文件，不跑 Jekyll，中文文件名和 `pages/` 才不会出问题。
-
-## 更新内容
-
-重新抓取一篇文章后，把它存成 `raw/aNN.json`（字段：`index/title/author/dateText/ct/html/url`），然后：
-
-```bash
-node scripts/build.mjs   # 重新生成 Markdown + 快照 + 图片
-node scripts/site.mjs    # 重新生成首页 / README / llms.txt
-```
 
 ## 版权与转载
 
@@ -106,7 +42,6 @@ node scripts/site.mjs    # 重新生成首页 / README / llms.txt
 - ✅ 改编后的作品需以**相同许可**共享
 - ❌ **不得用于商业用途**（如需商用请先联系作者）
 
-转换脚本（`scripts/`）采用 MIT 许可。
 
 ## 原文
 
